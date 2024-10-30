@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image } fr
 import { FontAwesome } from '@expo/vector-icons';
 
 export default function AddTaskScreen({ route, navigation }) {
-  const { userName = 'User' } = route.params || {};
+  const { userName = 'AbyssT'} = route.params || {};
   const [task, setTask] = useState('');
 
   const handleAddTask = () => {
