@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, TextInput, Image } 
 import { FontAwesome } from '@expo/vector-icons';
 
 export default function TaskListScreen({ route, navigation }) {
-  const { userName } = route.params;
+  const { userName = 'AbyssT' } = route.params || {};
   const [tasks, setTasks] = useState([
     { id: '1', title: 'To check email', completed: false },
     { id: '2', title: 'UI task web page', completed: false },
@@ -81,7 +81,7 @@ export default function TaskListScreen({ route, navigation }) {
       {/* Add Task Button */}
       <TouchableOpacity
         style={styles.addButton}
-        onPress={() => navigation.navigate('AddTask', { userName })}
+                onPress={() => navigation.navigate('AddTask', { userName })}
       >
         <Text style={styles.addButtonText}>+</Text>
       </TouchableOpacity>
